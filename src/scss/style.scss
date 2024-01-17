@@ -1,0 +1,157 @@
+@use 'sass:math';
+
+// Connection of mixins
+@import 'base/mixins';
+//==========================================================================
+
+// Connecting fonts
+//&display=swap - add when connecting through a plugin
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap');
+//==========================================================================
+
+// Connect if there are local font files
+
+//@import "fonts/fonts";
+
+//==========================================================================
+
+// Connection of icon fonts
+// Connect if there is an icon font file
+
+//@import "fonts/icons";
+
+//=========================================================================
+
+//=========================================================================
+
+// CSS-Vars
+:root {
+	//=========================================================================
+	--font-size: #{(toRem(16))}; // where 16(px) - default font size from layout
+	//=========================================================================
+	--font-family: 'Montserrat'; // Default font
+	//=========================================================================
+	--main-color: #030C15; // Default font color
+	--white-color: #fff;
+	--background-color: #f6f6f6;
+	--accent-color: #57c13f;
+	--blue-color: #004d73;
+	//=========================================================================
+	--line-height: 1.4; // Default line-height
+}
+
+//=========================================================================
+
+// Adaptive grid settings
+
+// Minimum page width
+$minWidth: 320;
+// Layout width
+$maxWidth: 1920;
+// Width of the container (0 = no container)
+$maxWidthContainer: 1200;
+// The total padding of the container
+// (30 = 15px left and right, 0 = no indentation)
+$containerPadding: 30;
+
+// Width of triggering of the first breakpoint
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileSmall: em(479.98); // Телефони S
+
+//=========================================================================
+
+// Обнулення
+@import 'base/null';
+
+//=========================================================================
+
+// BODY Tag styles
+
+body {
+
+	// Scroll is locked
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+
+	// The site is loaded
+	.loaded & {}
+}
+
+//=========================================================================
+
+// The wrapper
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+
+	// Press the footer
+	>main {
+		flex: 1 1 auto;
+	}
+
+	// Fix for sliders
+	>* {
+		min-width: 0;
+	}
+}
+
+//=========================================================================
+
+// Container
+/*
+(i) Styles will apply to
+of all classes containing *__container
+For example, header__container, main__container, etc.
+Snippet (HTML): cnt
+*/
+
+[class*='__container'] {
+	@if ($maxWidthContainer>0) {
+		max-width: toRem($containerWidth);
+		margin: 0 auto;
+	}
+
+	@if ($containerPadding>0) {
+		@if ($maxWidthContainer>0) {
+			padding: 0 toRem(math.div($containerPadding, 2));
+		}
+
+		@else {
+			@include adaptiveValue('padding-left',
+				math.div($containerPadding, 2),
+				15);
+			@include adaptiveValue('padding-right',
+				math.div($containerPadding, 2),
+				15);
+		}
+	}
+}
+
+// Connection of basic styles, templates (blanks) and auxiliary classes
+// To enable/disable specific styles, see  base.scss
+
+@import 'base';
+
+// Connecting the styles of common elements of the project
+@import 'common';
+
+// Connecting the styles of individual blocks
+@import 'header';
+@import 'footer';
+
+// Connecting the styles of individual pages
+@import 'home';

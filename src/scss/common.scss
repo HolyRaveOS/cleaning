@@ -1,0 +1,62 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.btn {
+	background-color: var(--accent-color);
+	padding: toRem(15);
+	border-radius: toRem(10);
+	font-weight: 600;
+	font-size: toRem(18);
+	line-height: 1.5;
+
+	max-width: toRem(387);
+	width: 100%;
+
+	transition: background-color 0.2s,
+		color 0.3s, border 0.2s;
+
+	&--medium {
+		max-width: toRem(271);
+	}
+
+	&--small {
+		max-width: toRem(247);
+	}
+
+	&--medium,
+	&--small {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: toRem(10);
+
+		svg {
+			path {
+				transition: all 0.2s;
+			}
+		}
+
+		&:hover {
+			background-color: var(--blue-color);
+			color: var(--white-color);
+
+			svg {
+				path {
+					stroke: white;
+				}
+			}
+		}
+	}
+
+	&--border {
+		background-color: transparent;
+		border: toRem(1) solid var(--accent-color);
+
+		&:hover {
+			background-color: var(--white-color);
+		}
+	}
+
+	&--border-small {
+		max-width: toRem(314);
+	}
+}
