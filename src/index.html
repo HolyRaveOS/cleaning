@@ -1,12 +1,28 @@
 <!doctype html>
 <html lang="uk">
-  @@include('html/_head.htm',{ "title":"HomePage" })
+	@@include('html/_head.htm',{ "title":"HomePage" })
 
-  <body>
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
-      <main class="page"></main>
-      @@include('html/_footer.htm',{})
-    </div>
-  </body>
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="hero"
+					style="background-image: url('./img/main-photo.png');">
+					<div class="hero__container">
+
+						<!-- <button class="btn btn--medium">
+							<svg width="31" height="31"
+								fill="none">
+								<path stroke="#030C15" stroke-linecap="round"
+									stroke-linejoin="round" stroke-width="2.583"
+									d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
+							</svg>
+							Замовити послугу
+						</button> -->
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+	</body>
 </html>
