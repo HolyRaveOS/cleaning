@@ -6,19 +6,45 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section class="hero"
-					style="background-image: url('./img/main-photo.png');">
+				<section class="hero">
+					<img class="hero__decor-img" src="@img//hero/vector.png" alt="Декор">
 					<div class="hero__container">
-
-						<!-- <button class="btn btn--medium">
-							<svg width="31" height="31"
-								fill="none">
-								<path stroke="#030C15" stroke-linecap="round"
-									stroke-linejoin="round" stroke-width="2.583"
-									d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
-							</svg>
-							Замовити послугу
-						</button> -->
+						<div class="hero__body">
+							<div class="hero__content">
+								<h1 class="hero__title">
+									Професійне<br> <span>прибирання</span> вашої домівки
+								</h1>
+								<p class="hero__text">
+									Бездоганна чистота - запорука вашого домашнього комфорту. Ми гарантуємо
+									якісне прибирання вашого житла. З нами ваша оселя завжди засяє
+									ідеальною чистотою.
+								</p>
+								<div class="hero__buttons">
+									<button class="btn btn--medium">
+										<svg width="31" height="31"
+											fill="none">
+											<path stroke="#030C15" stroke-linecap="round"
+												stroke-linejoin="round" stroke-width="2.583"
+												d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
+										</svg>
+										Замовити послугу
+									</button>
+									<a href="#" class="btn btn--border btn--border-small">
+										Безкоштовна консультація
+									</a>
+								</div>
+								<p class="hero__discount-text">
+									*При першому замовленні знижка -10%
+								</p>
+							</div>
+							<div class="hero__img">
+								<picture>
+									<source media="(max-width:767.98px)"
+										srcset="@img/hero/main-photo-small.png">
+									<img src="@img/hero/main-photo.png" alt="Фото Тані">
+								</picture>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>

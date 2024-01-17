@@ -7,7 +7,6 @@
 	@include adaptiveValue("padding-bottom", 30, 5);
 	font-weight: 500;
 	font-size: toRem(18);
-	background-color: var(--white-color);
 	z-index: 100;
 
 	&__container {
@@ -112,6 +111,10 @@
 		transition: color 0.3s;
 		z-index: 5;
 
+		@media (min-width:$mobile) {
+			color: var(--white-color);
+		}
+
 		@media (max-width:$mobileSmall) {
 			justify-content: end;
 			padding: toRem(5) toRem(15);
@@ -172,6 +175,16 @@
 		}
 	}
 
+	&__item {
+
+		@media (min-width:$pc) {
+			&:last-child {
+				color: var(--white-color);
+			}
+		}
+
+	}
+
 	&__link {
 		transition: color 0.3s;
 
@@ -180,10 +193,6 @@
 			font-size: toRem(24);
 			padding: toRem(5) 0;
 		}
-
-		// &:last-child {
-		// 	color: var(--white-color);
-		// }
 
 		&:hover {
 			color: var(--accent-color);
@@ -220,6 +229,10 @@
 			transition: background-color 0.2s;
 			background-color: #000000;
 
+			@media (min-width:$mobile) {
+				background-color: #fff;
+			}
+
 			&::before,
 			&::after {
 				content: '';
@@ -229,6 +242,10 @@
 				background-color: #000000;
 				position: absolute;
 				transition: all 0.3s ease 0s;
+
+				@media (min-width:$mobile) {
+					background-color: #fff;
+				}
 			}
 
 			&::before {
@@ -241,6 +258,11 @@
 
 			.menu-open & {
 				background-color: transparent;
+
+				&::before,
+				&::after {
+					background-color: #000000;
+				}
 
 				&::before {
 					top: 0;

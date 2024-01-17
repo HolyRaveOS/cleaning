@@ -1,1 +1,118 @@
+.hero {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+	background-color: var(--background-color, #F6F6F6);
+	overflow: hidden;
 
+	&__decor-img {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__body {
+		display: flex;
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__content {
+		@media (min-width:$mobile) {
+			max-width: toRem(670);
+		}
+
+		width: 100%;
+		@include adaptiveValue("margin-top", 220, 120, 1, 1920, 767.98);
+		@include adaptiveValue("margin-bottom", 100, 50, 1, 1920, 767.98);
+		z-index: 1;
+
+		@media (max-width:$mobile) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+			@include adaptiveValue("margin-top", 130, 90);
+			text-align: center;
+		}
+	}
+
+	&__title {
+		font-size: toRem(47);
+		@include adaptiveValue("font-size", 47, 26, 1, 767.98);
+		font-weight: 700;
+		text-transform: uppercase;
+		@include adaptiveValue("margin-bottom", 20, 10);
+
+		@media (max-width:$tablet) {
+			max-width: toRem(450);
+		}
+
+		span {
+			color: var(--accent-color);
+		}
+
+		@media (max-width:$mobile) {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("margin-bottom", 50, 15);
+		@include adaptiveValue("font-size", 18, 14);
+
+		@media (max-width:$pc) {
+			@include adaptiveValue("max-width", 650, 500, 1, 1200, 900);
+			max-width: toRem(500);
+		}
+
+		@media (max-width:$mobile) {
+			max-width: 100%;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: toRem(30);
+		@include adaptiveValue("margin-bottom", 15, 10);
+
+		@media (max-width:$mobile) {
+			justify-content: center;
+			flex-wrap: wrap;
+			row-gap: toRem(10);
+
+			button {
+				max-width: toRem(314);
+			}
+		}
+	}
+
+	&__img {
+
+		img {
+			margin: 0 auto;
+		}
+
+		@media (min-width:$mobile) {
+			img {
+				@include adaptiveValue("max-width", 850, 370, 1, 1920);
+				width: 100%;
+				top: 0;
+				@include adaptiveValue("right", 0, -180, 1, 1920, 1100);
+				right: -180px;
+				position: absolute;
+				height: 100%;
+			}
+		}
+
+		@media (max-width:$mobileSmall) {
+			@include adaptiveValue("margin-right", 0, -50);
+		}
+	}
+
+	&__discount-text {
+		@include adaptiveValue("font-size", 16, 14);
+	}
+}
