@@ -5,6 +5,7 @@
 	background-size: contain;
 	background-color: var(--background-color, #F6F6F6);
 	overflow: hidden;
+	padding-bottom: toRem(1);
 
 	&__decor-img {
 		position: absolute;
@@ -27,6 +28,8 @@
 			max-width: toRem(670);
 		}
 
+		margin-top: toRem(220);
+		margin-bottom: toRem(100);
 		width: 100%;
 		@include adaptiveValue("margin-top", 220, 120, 1, 1920, 767.98);
 		@include adaptiveValue("margin-bottom", 100, 50, 1, 1920, 767.98);
@@ -93,17 +96,33 @@
 
 		img {
 			margin: 0 auto;
+			max-width: 900px;
+			width: 100%;
+			min-height: 1100px;
+			object-fit: cover;
+			object-position: 25%;
+			border-bottom-left-radius: 50%;
+			border-top-left-radius: 50%;
 		}
 
 		@media (min-width:$mobile) {
 			img {
-				@include adaptiveValue("max-width", 850, 370, 1, 1920);
-				width: 100%;
-				top: 0;
+				@include adaptiveValue("max-width", 900, 370, 1, 1920);
+				top: -10%;
 				@include adaptiveValue("right", 0, -180, 1, 1920, 1100);
 				right: -180px;
 				position: absolute;
 				height: 100%;
+			}
+		}
+
+		@media (max-width:$mobile) {
+			img {
+				margin-bottom: -20%;
+				max-width: toRem(590);
+				min-height: toRem(590);
+				@include adaptiveValue("min-height", 590, 300, 1, 767.98);
+				border-radius: 50%;
 			}
 		}
 
