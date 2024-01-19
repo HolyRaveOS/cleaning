@@ -416,7 +416,7 @@
 
 	@include adaptiveValue("padding-top", $padding-big, calc($padding-small / 2));
 
-	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
+	@include adaptiveValue("padding-bottom", $padding-big, calc($padding-small / 2));
 
 	&__decor-img {
 		position: absolute;
@@ -556,37 +556,115 @@
 	}
 
 	&__slider-buttons {
-		display: flex;
-		justify-content: center;
-		gap: toRem(15);
+		display: none;
+
+		@media (max-width: em(600)) {
+			display: flex;
+			justify-content: center;
+			gap: toRem(15);
+		}
+
+	}
+}
+
+//===========================================================
+
+.why-us {
+	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
+	@include adaptiveValue("padding-bottom", calc($padding-big + 50), $padding-small);
+	background-image: url('@img/why-us/decor.svg');
+	background-repeat: no-repeat;
+	background-position: toRem(0) toRem(-250);
+}
+
+//============================================================
+
+.our-works {
+	position: relative;
+	@include adaptiveValue("padding-top", $padding-big, $padding-small);
+	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
+
+	background: var(--Liner, linear-gradient(180deg, #F6F6F6 95.67%, rgba(246, 246, 246, 0.00) 100%));
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url('@img/our-works/decor-top.svg');
+		width: 100%;
+		height: toRem(80);
+		background-repeat: no-repeat;
+		top: -1px;
 	}
 
-	&__button-prev,
-	&__button-next {
-		@media (max-width:em(600)) {
-			width: toRem(30);
-			height: toRem(30);
-			background-color: rgba(87, 193, 63, 0.50);
-			border-radius: toRem(5);
-			display: flex;
-			align-items: center;
-			justify-content: center;
+	&__container {
+		position: relative;
 
-			&::before {
-				content: '';
-				background-image: url('@img/icons/vector.svg');
-				min-height: toRem(16);
-				min-width: toRem(15);
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: contain;
-			}
+		@media (max-width:$mobileSmall) {
+			padding: 0 toRem(10);
 		}
 	}
 
-	&__button-prev {
-		&::before {
-			transform: rotate(180deg);
+	&__slider {
+		padding-bottom: toRem(10);
+	}
+
+	&__wrapper {
+		margin-bottom: toRem(30);
+	}
+
+	&__images-box {
+		position: relative;
+		display: flex;
+		gap: toRem(10);
+	}
+
+	&__img {
+		overflow: hidden;
+		border-radius: toRem(10);
+		@include adaptiveValue("height", 510, 260);
+		@include adaptiveValue("width", 285, 165);
+
+		img,
+		video {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__img-text {
+		position: absolute;
+		font-size: toRem(20);
+		font-weight: 500;
+		padding: toRem(5) toRem(10);
+		background: var(--white-color);
+		border-radius: toRem(10);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+//================================================
+
+.how-to-get {
+	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
+
+	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
+
+	background-image: url('@img/why-us/decor.svg');
+	background-repeat: no-repeat;
+	background-position: toRem(0) toRem(-250);
+
+	&__btn {
+		@media (min-width:$tablet) {
+			margin-left: toRem(315);
+			margin-top: toRem(70);
+		}
+
+		@media (max-width:$tablet) {
+			margin: 0 auto;
+			@include adaptiveValue("margin-top", 30, 20);
 		}
 	}
 }

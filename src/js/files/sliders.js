@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -30,7 +30,10 @@ const swiperWrapper = document.querySelector('.equipment__wrapper');
 
 function initSlider() {
   // Ініціалізуємо слайдер лише при розмірі екрану менше або рівному 600
-  if (window.innerWidth <= 600) {
+  if (
+    window.innerWidth <= 600 &&
+    document.querySelector('.equipment__slider')
+  ) {
     swiperWrapper.classList.add('swiper-wrapper');
     mySwiper = new Swiper('.equipment__slider', {
       modules: [Navigation],
@@ -47,9 +50,32 @@ function initSlider() {
   }
 }
 
+function ourWorksSlider() {
+  if (document.querySelector('.our-works__slider')) {
+    new Swiper('.our-works__slider', {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+
+      navigation: {
+        prevEl: '.our-works__button-prev',
+        nextEl: '.our-works__button-next',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+}
+
 // Перевірка розміру екрану при завантаженні сторінки
 window.addEventListener('load', function () {
   initSlider();
+  ourWorksSlider();
 });
 
 // Перевірка розміру екрану при зміні розміру вікна

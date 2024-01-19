@@ -325,3 +325,124 @@
 		flex-grow: 1;
 	}
 }
+
+.info-cards {
+	display: grid;
+	gap: toRem(20);
+	grid-template-columns: repeat(4, 1fr);
+	list-style-type: none;
+	counter-reset: item;
+
+	@media (max-width:$tablet) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: em(600)) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	&__item {
+		position: relative;
+		border-radius: 10px;
+		border: 1px solid var(--background-color, #F6F6F6);
+		background-color: var(--white-color, #FFF);
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+		padding: toRem(30) toRem(15) toRem(15) toRem(15);
+
+		@media (min-width:$tablet) {
+			&:nth-child(even) {
+				transform: translateY(20%);
+			}
+		}
+
+		&:before {
+			counter-increment: item;
+			content: counter(item, decimal-leading-zero);
+			color: rgba(3, 12, 21, 0.06);
+			font-size: 55px;
+			font-weight: 500;
+			line-height: 1;
+			position: absolute;
+			left: toRem(5);
+			top: 0;
+		}
+	}
+
+	&__title {
+		font-size: toRem(20);
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: toRem(5);
+		padding-bottom: toRem(5);
+		margin-bottom: toRem(20);
+		border-bottom: solid 1px var(--accent-color);
+		width: 95%;
+
+		&::before {
+			content: '';
+			background-image: url('@img/icons/arrow.svg');
+			min-width: toRem(24);
+			min-height: toRem(24);
+		}
+	}
+}
+
+.button-prev,
+.button-next {
+	min-width: toRem(30);
+	min-height: toRem(30);
+	background-color: rgba(87, 193, 63, 0.50);
+	border-radius: toRem(5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		content: '';
+		background-image: url('@img/icons/vector.svg');
+		min-height: toRem(16);
+		min-width: toRem(15);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&.swiper-button-disabled {
+		opacity: 0.5;
+		cursor: none;
+	}
+}
+
+.button-prev {
+	&::before {
+		transform: rotate(180deg);
+	}
+}
+
+.swiper-pagination {
+	display: flex;
+	gap: toRem(10);
+	justify-content: center;
+}
+
+.swiper-pagination-bullet {
+	width: toRem(15);
+	height: toRem(15);
+	border-radius: 50%;
+	background-color: rgba(87, 193, 63, 0.20);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	&::before {
+		content: '';
+		min-width: toRem(25);
+		min-height: toRem(40);
+	}
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: var(--accent-color);
+}
