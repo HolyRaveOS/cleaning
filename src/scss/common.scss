@@ -82,6 +82,10 @@
 	&--border-small {
 		max-width: toRem(314);
 	}
+
+	&--border-extra-small {
+		max-width: toRem(293);
+	}
 }
 
 .title {
@@ -104,6 +108,7 @@
 	align-items: center;
 	@include adaptiveValue("margin-bottom", 20, 10);
 
+
 	@media (max-width:$tablet) {
 		flex-direction: column;
 	}
@@ -114,6 +119,7 @@
 		left: 0;
 
 		@media (min-width:$mobile) {
+			padding-bottom: toRem(15);
 			position: absolute;
 		}
 	}
@@ -279,7 +285,7 @@
 
 		&::before {
 			content: '';
-			background-image: url('../img/icons/shevron.svg');
+			background-image: url('@img/icons/shevron.svg');
 			min-width: toRem(24);
 			min-height: toRem(24);
 			transition: transform 0.3s;

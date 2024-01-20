@@ -8,6 +8,11 @@
 	font-weight: 500;
 	font-size: toRem(18);
 	z-index: 100;
+	transition: background-color 0.3s;
+
+	&._header-scroll {
+		background-color: rgb(246, 246, 246, 0.9);
+	}
 
 	&__container {
 		display: flex;
@@ -80,9 +85,8 @@
 	}
 
 	&__spollers-body {
-		display: flex;
-		flex-direction: column;
-		gap: toRem(8);
+		border-radius: toRem(10);
+		background-color: var(--white-color);
 
 		@media (min-width:$pc) {
 			position: absolute;
@@ -104,12 +108,23 @@
 		}
 	}
 
+	&__spollers-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(8);
+		padding: toRem(10);
+	}
+
 	&__phone {
 		display: flex;
 		align-items: center;
 		gap: toRem(4);
 		transition: color 0.3s;
 		z-index: 5;
+
+		._header-scroll & {
+			color: var(--main-color);
+		}
 
 		@media (min-width:$mobile) {
 			color: var(--white-color);
@@ -181,8 +196,11 @@
 			&:last-child {
 				color: var(--white-color);
 			}
-		}
 
+			._header-scroll & {
+				color: var(--main-color);
+			}
+		}
 	}
 
 	&__link {
@@ -231,6 +249,10 @@
 
 			@media (min-width:$mobile) {
 				background-color: #fff;
+
+				._header-scroll & {
+					background-color: #000;
+				}
 			}
 
 			&::before,
@@ -245,6 +267,10 @@
 
 				@media (min-width:$mobile) {
 					background-color: #fff;
+
+					._header-scroll & {
+						background-color: #000;
+					}
 				}
 			}
 

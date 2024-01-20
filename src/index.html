@@ -21,12 +21,7 @@
 								</p>
 								<div class="hero__buttons">
 									<button class="btn btn--medium">
-										<svg width="31" height="31"
-											fill="none">
-											<path stroke="#030C15" stroke-linecap="round"
-												stroke-linejoin="round" stroke-width="2.583"
-												d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
-										</svg>
+										@@include('html/_icon.htm',{})
 										Замовити послугу
 									</button>
 									<a href="#" class="btn btn--border btn--border-small">
@@ -811,13 +806,8 @@
 								</div>
 							</div>
 						</div>
-						<button class="cleaning__btn btn btn--small">
-							<svg width="31" height="31"
-								fill="none">
-								<path stroke="#030C15" stroke-linecap="round"
-									stroke-linejoin="round" stroke-width="2.583"
-									d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
-							</svg>
+						<button class="cleaning__btn btn btn--medium">
+							@@include('html/_icon.htm',{})
 							Замовити послугу
 						</button>
 					</div>
@@ -1065,15 +1055,250 @@
 								</li>
 							</ul>
 						</div>
-						<button class="how-to-get__btn btn btn--small">
-							<svg width="31" height="31"
-								fill="none">
-								<path stroke="#030C15" stroke-linecap="round"
-									stroke-linejoin="round" stroke-width="2.583"
-									d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
-							</svg>
+						<button class="how-to-get__btn btn btn--medium">
+							@@include('html/_icon.htm',{})
 							Замовити послугу
 						</button>
+					</div>
+				</section>
+				<section class="about">
+					<div class="about__container">
+						<div class="about__title-box title-box">
+							<span class="about__text title-box__text">
+								Давайте знайомитися
+							</span>
+							<h2 class="about__title title">
+								Тетяна Логай
+							</h2>
+						</div>
+						<div class="about__body">
+							<div class="about__info-item">
+								<p class="about__heading">
+									Вітаю! Мене звати Тетяна, я працюю клінером.
+								</p>
+								<div class="about__text-block">
+									<p>
+										Чистота та порядок завжди були моєю пристрастю. Саме тому я вирішила
+										обрати клінінг своєю професією.
+									</p>
+									<p>
+										Для початку я пройшла ґрунтовні курси в Київській клінінговій школі,
+										де опанувала усі сучасні техніки прибирання та догляду за
+										приміщеннями.
+									</p>
+									<p>
+										За час роботи я встигла досконало прибрати велику кількість квартир
+										та будинків. Моя ретельність, відповідальність та увага до деталей
+										дозволяють досягти ідеальних результатів у клінінгу.
+									</p>
+									<p>
+										Я постійно вдосконалюю свої навички, щоб надавати послуги на
+										найвищому рівні. Запрошую до співпраці! Разом зробимо ваше житло
+										по-справжньому бездоганно чистим!
+									</p>
+								</div>
+								<div class="about__stat-block">
+									<div class="about__stat-block-item">
+										<span class="about__stat-block-heading">100+</span>
+										<span class="about__stat-block-text">Задоволених клієнтів</span>
+									</div>
+									<div class="about__stat-block-item">
+										<span class="about__stat-block-heading">400+</span>
+										<span class="about__stat-block-text">Відпрацьованих годин</span>
+									</div>
+								</div>
+								<div class="about__buttons-block">
+									<button class="about__btn btn btn--medium">
+										@@include('html/_icon.htm',{})
+										Замовити послугу
+									</button>
+									<button class="about__btn btn btn--border btn--border-extra-small">
+										Переглянути сертифікат
+									</button>
+								</div>
+							</div>
+							<div class="about__img-item">
+								<div class="about__img">
+									<picture>
+										<source media="(max-width:991.98px)"
+											srcset="@img/about/photo-mobile.jpg">
+										<img src="@img/about/photo.jpg" alt="Фото Тетяни">
+									</picture>
+									<p class="about__img-item-text">
+										Найкращі послуги клінінгу для ваших домівок та офісів
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="reviews">
+					<div class="reviews__container">
+						<div class="reviews__title-box title-box">
+							<span class="reviews__text title-box__text">
+								Відгуки
+							</span>
+							<h2 class="reviews__title title">
+								Що говорять клієнти про нашу роботу
+							</h2>
+						</div>
+						<div class="reviews__slider swiper">
+							<div class="reviews__wrapper swiper-wrapper">
+								<div class="reviews__slide swiper-slide">
+									<div class="reviews__slide-img">
+										<img src="@img/reviews/1.png" alt="Відгук">
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="reviews__slide-img">
+										<img src="@img/reviews/2.png" alt="Відгук">
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="reviews__slide-img">
+										<img src="@img/reviews/3.png" alt="Відгук">
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="reviews__slide-img">
+										<img src="@img/reviews/4.png" alt="Відгук">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<section class="faq">
+					<div class="faq__container">
+						<div class="faq__title-box title-box">
+							<span class="faq__text title-box__text">
+								Питання
+							</span>
+							<h2 class="faq__title title">
+								Популярні запитання від наших клієнтів
+							</h2>
+						</div>
+						<div class="faq__body">
+							<div class="faq__questions">
+								<div data-spollers class="faq__spollers">
+									<details class="faq__spollers-item">
+										<summary data-spoller-close class="faq__spollers-title">
+											Навіщо вам фото нашої квартири - будинку?
+										</summary>
+										<div class="faq__spollers-body">
+											<div class="faq__spollers-wrapper">
+												<p class="faq__spollers-body-text">
+													Так, ми просимо фото. Не тому, що ми хочемо оцінити ваш дизайн або
+													ремонт. Нам потрібно фото для того щоб:
+												</p>
+												<ul class="faq__spollers-body-list">
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Оцінити обсяг роботи
+														</p>
+													</li>
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Вирішити, скільки клінерів відправити
+														</p>
+													</li>
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Оцінити, які засоби необхідні для прибирання
+														</p>
+													</li>
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Скільки часу потрібно на прибирання
+														</p>
+													</li>
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Яка буде точна та кінцева вартість прибирання.
+														</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</details>
+									<details class="faq__spollers-item">
+										<summary data-spoller-close class="faq__spollers-title">
+											Від чого залежить ціна прибирання?
+										</summary>
+										<div class="faq__spollers-body">
+											<div class="faq__spollers-wrapper">
+												<ul class="faq__spollers-body-list">
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Загальна площа оселі
+														</p>
+													</li>
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Рівень забруднення
+														</p>
+													</li>
+													<li class="faq__spollers-body-item">
+														<p class="faq__spollers-body-item-text">
+															Послуга
+														</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</details>
+									<details class="faq__spollers-item">
+										<summary data-spoller-close class="faq__spollers-title">
+											Яке обладнання ви використовуєте?
+										</summary>
+										<div class="faq__spollers-body">
+											<div class="faq__spollers-wrapper">
+												<p class="faq__spollers-body-item-text">
+													Ми використовуємо професійну техніку «Karcher» та «Profi»
+													(Німеччина). Продукція цих виробників прекрасно себе
+													зарекомендувала
+													та ніколи нас не підводила.
+												</p>
+											</div>
+										</div>
+									</details>
+									<details class="faq__spollers-item">
+										<summary data-spoller-close class="faq__spollers-title">
+											Чи можу я бути на квартирі під час прибирання?
+										</summary>
+										<div class="faq__spollers-body">
+											<div class="faq__spollers-wrapper">
+												<p class="faq__spollers-body-item-text">
+													Присутність при прибиранні – це вибір і бажання кожного, але скажу
+													так, що це неймовірна можливість відпочити 😉
+												</p>
+											</div>
+										</div>
+									</details>
+									<details class="faq__spollers-item">
+										<summary data-spoller-close class="faq__spollers-title">
+											Чи впливає ступінь забруднення на якість?
+										</summary>
+										<div class="faq__spollers-body">
+											<div class="faq__spollers-wrapper">
+												<p class="faq__spollers-body-item-text">
+													Так, звичайно. Такі випадки бувають. Завжди ми стараємось досягти
+													максимального результату і працюємо на якість, але з старого нове
+													не
+													зробиш)
+												</p>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="faq__img-item">
+								<div class="faq__img-item-img">
+									<img src="@img/faq/photo.jpg" alt="Фото тетяни">
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>

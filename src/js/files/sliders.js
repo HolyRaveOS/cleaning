@@ -53,16 +53,28 @@ function initSlider() {
 function ourWorksSlider() {
   if (document.querySelector('.our-works__slider')) {
     new Swiper('.our-works__slider', {
-      modules: [Navigation, Pagination],
+      modules: [Pagination],
       observer: true,
       observeParents: true,
       slidesPerView: 'auto',
       spaceBetween: 20,
 
-      navigation: {
-        prevEl: '.our-works__button-prev',
-        nextEl: '.our-works__button-next',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
+    });
+  }
+}
+
+function reviews() {
+  if (document.querySelector('.reviews__slider')) {
+    new Swiper('.reviews__slider', {
+      modules: [Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
 
       pagination: {
         el: '.swiper-pagination',
@@ -76,6 +88,7 @@ function ourWorksSlider() {
 window.addEventListener('load', function () {
   initSlider();
   ourWorksSlider();
+  reviews();
 });
 
 // Перевірка розміру екрану при зміні розміру вікна
