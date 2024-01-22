@@ -1,3 +1,118 @@
 //========================================================
+.footer {
+	position: relative;
+	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
+
+	background-color: var(--background-color);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		background-image: url('@img/footer/decor.svg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: toRem(90);
+	}
+
+	&__container {
+		padding-top: toRem($ctn-padding);
+
+		@media (max-width:$mobileSmall) {
+			padding: toRem($ctn-padding) toRem(10) 0 toRem(10);
+		}
+	}
+
+	&__top {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: toRem(20);
+		@include adaptiveValue("padding-bottom", 30, 15);
+		border-bottom: solid 1px rgba(3, 12, 21, 0.50);
+
+		@media (max-width:$mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width:$mobileSmall) {
+			gap: toRem(10);
+		}
+	}
+
+	&__bottom {
+		@include adaptiveValue("padding-top", 30, 15);
+		@include adaptiveValue("padding-bottom", 60, 40);
+
+		display: flex;
+		align-items: center;
+
+		@media (max-width: em(600)) {
+			flex-direction: column;
+			row-gap: toRem(15);
+		}
+	}
+
+	&__logo {
+
+		max-width: toRem(159);
+		width: 100%;
+
+		@media (max-width:$tablet) {
+			margin-right: toRem(20);
+		}
+	}
+
+	&__bottom-info-box {
+		width: 100%;
+		display: flex;
+		gap: toRem(20);
+		font-size: toRem(14);
+		justify-content: space-between;
+
+		@media (min-width:$tablet) {
+			margin-left: toRem(156);
+		}
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+			row-gap: toRem(5);
+			text-align: end;
+		}
+
+		@media (max-width: em(600)) {
+			text-align: center;
+		}
+	}
+}
+
+.top-item {
+	&__title {
+		font-size: toRem(18);
+		font-weight: 600;
+		line-height: 1.3;
+		@include adaptiveValue("margin-bottom", 20, 10);
+	}
+
+	&__list-item {
+		@include adaptiveValue("font-size", 16, 14);
+
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+
+	&__list-item--social {
+		display: flex;
+		gap: toRem(10);
+		margin-bottom: toRem(8);
+	}
+
+	&__work-time,
+	&__list-text {
+		span {
+			display: block;
+		}
+	}
+}
 
 //========================================================

@@ -1,0 +1,62 @@
+<div class="form-block">
+	<h3 class="form-block__title">
+		Отримайте знижку -<span>10%</span> на перше замовлення
+	</h3>
+	<p class="form-block__text">
+		Залиште ваші дані і ми з вами зв’яжемося
+	</p>
+	<form class="form-block__form">
+		<label class="form-block__label">
+			<input data-validate data-error="Введіть ваше ім'я" class="form-block__input"
+				type="text" name="name"
+				placeholder="*Ваше ім’я">
+		</label>
+		<label class="form-block__label">
+			<input data-validate data-error="Введіть ваш номер телефону"
+				class="form-block__input" type="text" name="phone"
+				placeholder="*Номер телефону">
+		</label>
+		<label class="form-block__label">
+			<select class="form-block__select"
+				name="form[]" data-class-modif="form">
+				<option class="form-block__option" value="Послуга не обрана"
+					selected disabled>
+					Оберіть послугу
+				</option>
+				<option class="form-block__option" value="Генеральне прибирання">
+					Генеральне прибирання
+				</option>
+				<option class="form-block__option" value="Підтримуюче прибирання">
+					Підтримуюче прибирання
+				</option>
+				<option class="form-block__option" value="Прибирання після ремонту">
+					Прибирання після ремонту
+				</option>
+				<option class="form-block__option" value="Миття вікон">
+					Миття вікон
+				</option>
+			</select>
+		</label>
+		<label class="form-block__label">
+			<textarea class="form-block__textarea" name="message"
+				placeholder="Коментар до замовлення"></textarea>
+		</label>
+		<label class="form-block__label form-block__label--checkbox">
+			<input class="form-block__input form-block__input--checkbox" type="checkbox"
+				name="checkbox">
+			<span class="form-block__fake-checkbox"></span>
+			<span class="form-block__label-text">
+				Замовляю вперше у вас послугу
+			</span>
+		</label>
+		<button class="form-block__btn btn btn--small" type="submit">
+			<svg width="31" height="31"
+				fill="none">
+				<path stroke="#030C15" stroke-linecap="round"
+					stroke-linejoin="round" stroke-width="2.583"
+					d="M9.042 9.043 21.959 21.96m0 0V9.043m0 12.917H9.042" />
+			</svg>
+			Відправити
+		</button>
+	</form>
+</div>

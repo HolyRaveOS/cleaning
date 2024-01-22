@@ -1037,3 +1037,46 @@
 		}
 	}
 }
+
+//==============================================================
+.contacts {
+	position: relative;
+	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
+
+	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
+
+	&__title {
+		max-width: toRem(255);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(30);
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+			align-items: center;
+			gap: toRem(15);
+		}
+	}
+
+	&__map-item {
+		@media (min-width:$tablet) {
+			max-width: toRem(512);
+		}
+
+		width: 100%;
+		gap: toRem(20);
+		justify-content: space-between;
+	}
+
+	&__map-text {
+		@include adaptiveValue("font-size", 18, 14);
+	}
+
+	&__form-item {
+		max-width: toRem(590);
+		width: 100%;
+	}
+}
