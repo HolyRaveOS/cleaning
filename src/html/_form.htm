@@ -5,20 +5,23 @@
 	<p class="form-block__text">
 		Залиште ваші дані і ми з вами зв’яжемося
 	</p>
-	<form class="form-block__form">
+	<form class="form-block__form" action="#">
 		<label class="form-block__label">
-			<input data-validate data-error="Введіть ваше ім'я" class="form-block__input"
+			<input data-validate
+				id="basic_name"
+				class="form-block__input"
 				type="text" name="name"
 				placeholder="*Ваше ім’я">
 		</label>
 		<label class="form-block__label">
-			<input data-validate data-error="Введіть ваш номер телефону"
+			<input data-validate
+				id="basic_phone"
 				class="form-block__input" type="text" name="phone"
 				placeholder="*Номер телефону">
 		</label>
 		<label class="form-block__label">
 			<select class="form-block__select"
-				name="form[]" data-class-modif="form">
+				name="service">
 				<option class="form-block__option" value="Послуга не обрана"
 					selected disabled>
 					Оберіть послугу
