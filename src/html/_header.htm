@@ -1,6 +1,6 @@
 <header class="header">
 	<div class="header__container">
-		<a href="#" class="header__logo">
+		<a href="#body" data-goto="#body" class="header__logo">
 			<img src="@img/logo.svg" alt="Логотип">
 		</a>
 		<div class="header__menu menu">
@@ -24,25 +24,58 @@
 								</summary>
 								<div class="header__spollers-body">
 									<div class="header__spollers-wrapper">
-										<a class="header__spollers-link" href="#">Генеральне прибирання</a>
-										<a class="header__spollers-link" href="#">Підтримуюче прибирання</a>
-										<a class="header__spollers-link" href="#">Прибирання після ремонту</a>
+										<a class="header__spollers-link" href="#general-cleaning"
+											data-goto="#general-cleaning"
+											data-goto-top="150">
+											Генеральне прибирання
+										</a>
+										<a class="header__spollers-link"
+											href="#supportive-cleaning"
+											data-goto="#supportive-cleaning"
+											data-goto-top="150">
+											Підтримуюче прибирання
+										</a>
+										<a class="header__spollers-link" href="#after-repair-cleaning"
+											data-goto="#after-repair-cleaning"
+											data-goto-top="150">
+											Прибирання після ремонту
+										</a>
+										<a class="header__spollers-link" href="#window-washing-cleaning"
+											data-goto="#window-washing-cleaning"
+											data-goto-top="150">
+											Миття вікон
+										</a>
 									</div>
 								</div>
 							</details>
 						</div>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Наші роботи</a>
+						<a href="#our-works" class="menu__link"
+							data-goto="#our-works"
+							data-goto-top="30">
+							Наші роботи
+						</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Відгуки</a>
+						<a class="menu__link" href="#reviews"
+							data-goto="#reviews"
+							data-goto-top="100">
+							Відгуки
+						</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Faq</a>
+						<a class="menu__link" href="#faq"
+							data-goto="#faq"
+							data-goto-top="20">
+							Faq
+						</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Контакти</a>
+						<a class="menu__link" href="#contacts"
+							data-goto="#contacts">
+							Контакти
+						</a>
 					</li>
 				</ul>
 			</nav>

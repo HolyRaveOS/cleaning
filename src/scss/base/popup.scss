@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -24,17 +26,30 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+
+	&._sending {
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+	}
+
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,6 +61,7 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
@@ -55,7 +71,32 @@ body::after {
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;
+
 	.lock & {
 		visibility: visible;
 	}
+}
+
+.popup__close {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		min-width: toRem(30);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: toRem(44);
+		height: toRem(44);
+	}
+}
+
+.popup__content-img {
+	padding: toRem(10) 0 toRem(15) 0;
 }

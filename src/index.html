@@ -2,9 +2,11 @@
 <html lang="uk">
 	@@include('html/_head.htm',{ "title":"HomePage" })
 
-	<body>
+	<body id="body">
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
+			@@include('html/_popup.htm',{})
+			@@include('html/_popup1.htm',{})
 			<main class="page">
 				<section class="hero">
 					<img class="hero__decor-img" src="@img/hero/vector.svg" alt="Декор">
@@ -20,7 +22,7 @@
 									ідеальною чистотою.
 								</p>
 								<div class="hero__buttons">
-									<button class="btn btn--medium">
+									<button data-popup="#popup" class="btn btn--medium">
 										@@include('html/_icon.htm',{})
 										Замовити послугу
 									</button>
@@ -40,7 +42,7 @@
 				</section>
 				<section class="cleaning">
 					<div class="cleaning__container">
-						<div class="cleaning__general general-cleaning">
+						<div class="cleaning__general general-cleaning" id="general-cleaning">
 							<div class="general-cleaning__title-box title-box">
 								<span class="general-cleaning__text title-box__text">
 									Послуги
@@ -187,7 +189,8 @@
 													<span class="info-btn__btn"></span>
 													<span class="info-btn__text">Миємо раковину</span>
 												</div>
-												<img src="@img/general-cleaning/kitchen.jpg" alt="Кімната">
+												<img loading="lazy" src="@img/general-cleaning/kitchen.jpg"
+													alt="Кухня">
 											</div>
 											<div class="general-cleaning__info-list services-list">
 												<h3 class="services-list__title">
@@ -276,7 +279,8 @@
 													<span class="info-btn__btn"></span>
 													<span class="info-btn__text">Миємо всі елементи декору</span>
 												</div>
-												<img src="@img/general-cleaning/bathroom.jpg" alt="Кімната">
+												<img loading="lazy" src="@img/general-cleaning/bathroom.jpg"
+													alt="Ванна">
 											</div>
 											<div class="general-cleaning__info-list services-list">
 												<h3 class="services-list__title">
@@ -337,7 +341,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="cleaning__supportive supportive-cleaning">
+						<div class="cleaning__supportive supportive-cleaning"
+							id="supportive-cleaning">
 							<h2 class="cleaning__title title">
 								Підтримуюче прибирання
 							</h2>
@@ -515,7 +520,8 @@
 													<span class="info-btn__btn"></span>
 													<span class="info-btn__text">Миємо підлогу</span>
 												</div>
-												<img src="@img/supportive-cleaning/kitchen.jpg" alt="Кімната">
+												<img loading="lazy" src="@img/supportive-cleaning/kitchen.jpg"
+													alt="Кухня">
 											</div>
 										</div>
 									</div>
@@ -608,14 +614,16 @@
 													<span class="info-btn__btn"></span>
 													<span class="info-btn__text">Миємо плитку, де є забруднення</span>
 												</div>
-												<img src="@img/supportive-cleaning/bathroom.jpg" alt="Кімната">
+												<img loading="lazy" src="@img/supportive-cleaning/bathroom.jpg"
+													alt="Ванна">
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="cleaning__after-repair after-repair-cleaning">
+						<div class="cleaning__after-repair after-repair-cleaning"
+							id="after-repair-cleaning">
 							<h2 class="cleaning__title title">
 								Прибирання після ремонту
 							</h2>
@@ -648,7 +656,8 @@
 										<span class="info-btn__btn"></span>
 										<span class="info-btn__text">Знепилюємо стіни</span>
 									</div>
-									<img src="@img/сleaning-after-repair/room.jpg" alt="Кімната">
+									<img loading="lazy" src="@img/сleaning-after-repair/room.jpg"
+										alt="Кімната">
 								</div>
 								<div class="after-repair-cleaning__info-list services-list">
 									<h3 class="services-list__title">
@@ -703,7 +712,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="cleaning__window-washing window-washing-cleaning">
+						<div class="cleaning__window-washing window-washing-cleaning"
+							id="window-washing-cleaning">
 							<h2 class="cleaning__title title">
 								Миття вікон
 							</h2>
@@ -806,7 +816,7 @@
 								</div>
 							</div>
 						</div>
-						<button class="cleaning__btn btn btn--medium">
+						<button data-popup="#popup" class="cleaning__btn btn btn--medium">
 							@@include('html/_icon.htm',{})
 							Замовити послугу
 						</button>
@@ -941,7 +951,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="our-works">
+				<section class="our-works" id="our-works">
 					<div class="our-works__container">
 						<div class="our-works__title-box title-box">
 							<span class="our-works__title-box-text title-box__text">Роботи</span>
@@ -1055,7 +1065,7 @@
 								</li>
 							</ul>
 						</div>
-						<button class="how-to-get__btn btn btn--medium">
+						<button data-popup="#popup" class="how-to-get__btn btn btn--medium">
 							@@include('html/_icon.htm',{})
 							Замовити послугу
 						</button>
@@ -1108,11 +1118,12 @@
 									</div>
 								</div>
 								<div class="about__buttons-block">
-									<button class="about__btn btn btn--medium">
+									<button data-popup="#popup" class="about__btn btn btn--medium">
 										@@include('html/_icon.htm',{})
 										Замовити послугу
 									</button>
-									<button class="about__btn btn btn--border btn--border-extra-small">
+									<button data-popup="#popup1"
+										class="about__btn btn btn--border btn--border-extra-small">
 										Переглянути сертифікат
 									</button>
 								</div>
@@ -1132,7 +1143,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="reviews">
+				<section class="reviews" id="reviews">
 					<div class="reviews__container">
 						<div class="reviews__title-box title-box">
 							<span class="reviews__text title-box__text">
@@ -1169,7 +1180,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="faq">
+				<section class="faq" id="faq">
 					<div class="faq__container">
 						<div class="faq__title-box title-box">
 							<span class="faq__text title-box__text">
@@ -1301,7 +1312,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="contacts">
+				<section class="contacts" id="contacts">
 					<div class="contacts__container">
 						<div class="contacts__title-box title-box">
 							<span class="contacts__text title-box__text">

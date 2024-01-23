@@ -565,12 +565,16 @@
 
 //===========================================================
 
+.why-us,
+.how-to-get {
+	background-image: url('@img/why-us/decor.png');
+	background-repeat: no-repeat;
+	background-position: toRem(0) toRem(-250);
+}
+
 .why-us {
 	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
 	@include adaptiveValue("padding-bottom", calc($padding-big), $padding-small);
-	background-image: url('@img/why-us/decor.svg');
-	background-repeat: no-repeat;
-	background-position: toRem(0) toRem(-250);
 }
 
 //============================================================
@@ -645,12 +649,7 @@
 
 .how-to-get {
 	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
-
 	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
-
-	background-image: url('@img/why-us/decor.svg');
-	background-repeat: no-repeat;
-	background-position: toRem(0) toRem(-250);
 
 	&__btn {
 		@media (min-width:$tablet) {
