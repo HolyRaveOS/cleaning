@@ -11,7 +11,7 @@
 		position: absolute;
 		z-index: 1;
 		bottom: 0;
-		right: 0;
+		right: toRem(-5);
 	}
 
 	&__body {
@@ -124,10 +124,6 @@
 				@include adaptiveValue("min-height", 590, 300, 1, 767.98);
 				border-radius: 50%;
 			}
-		}
-
-		@media (max-width:$mobileSmall) {
-			@include adaptiveValue("margin-right", 0, -50);
 		}
 	}
 
@@ -452,7 +448,7 @@
 		}
 	}
 
-	&__item-title {
+	.title {
 		margin: 0;
 	}
 
@@ -573,8 +569,8 @@
 }
 
 .why-us {
-	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
-	@include adaptiveValue("padding-bottom", calc($padding-big), $padding-small);
+	@include adaptiveValue("padding-top", calc($padding-big / 2), $padding-small);
+	@include adaptiveValue("padding-bottom", calc($padding-big), calc($padding-small / 2 - 5));
 }
 
 //============================================================
@@ -624,11 +620,13 @@
 		@include adaptiveValue("height", 510, 260);
 		@include adaptiveValue("width", 285, 165);
 
+
 		img,
 		video {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+			border-radius: toRem(10)
 		}
 	}
 
@@ -648,8 +646,9 @@
 //================================================
 
 .how-to-get {
-	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
-	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
+	@include adaptiveValue("padding-top", calc($padding-big / 2), $padding-small);
+	@include adaptiveValue("padding-bottom", calc($padding-big / 2), 12);
+
 
 	&__btn {
 		@media (min-width:$tablet) {
@@ -667,13 +666,14 @@
 //=============================================================
 
 .about {
-
-	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
-
-	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
-
 	position: relative;
+
+	@include adaptiveValue("padding-top", calc($padding-big / 2), 10);
+
+	@include adaptiveValue("padding-bottom", calc($padding-big / 2), $padding-small);
+
 	background: var(--Liner, linear-gradient(180deg, #F6F6F6 95.67%, rgba(246, 246, 246, 0.00) 100%));
+
 
 	&::before,
 	&::after {
@@ -698,7 +698,7 @@
 		padding-top: toRem($ctn-padding);
 
 		@media (max-width:$mobileSmall) {
-			padding: 0 toRem(10);
+			padding: toRem(80) toRem(10) 0 toRem(10);
 		}
 	}
 
@@ -865,7 +865,7 @@
 
 .reviews {
 
-	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
+	@include adaptiveValue("padding-top", calc($padding-big / 2), $padding-small);
 
 	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
 
@@ -895,6 +895,7 @@
 		width: 100%;
 		height: toRem(190);
 		box-shadow: 0px 5.407px 13.517px 0px rgba(0, 0, 0, 0.25);
+		background: var(--white-color);
 
 		img {
 			width: 100%;
@@ -935,6 +936,10 @@
 
 	&__container {
 		padding: toRem($ctn-padding) toRem(15);
+
+		@media (max-width:$mobileSmall) {
+			padding: toRem($ctn-padding - 20) toRem(15);
+		}
 	}
 
 	&__body {
@@ -1040,9 +1045,9 @@
 //==============================================================
 .contacts {
 	position: relative;
-	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2));
+	@include adaptiveValue("padding-top", calc($padding-big / 2), calc($padding-small / 2 - 10));
 
-	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2));
+	@include adaptiveValue("padding-bottom", calc($padding-big / 2), calc($padding-small / 2 - 5));
 
 	&__title {
 		max-width: toRem(255);

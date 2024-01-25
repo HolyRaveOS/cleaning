@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="uk">
-	@@include('html/_head.htm',{ "title":"HomePage" })
+	@@include('html/_head.htm',{
+	"title":"Клінінг - Клінінгові послуги | Прибирання" })
 
 	<body id="body">
 		<div class="wrapper">
@@ -35,7 +36,7 @@
 								</p>
 							</div>
 							<div class="hero__img">
-								<img src="@img/hero/main-photojpg.jpg" alt="Фото Тані">
+								<img src="@img/hero/main-photo.jpg" alt="Фото Тані">
 							</div>
 						</div>
 					</div>
@@ -152,7 +153,9 @@
 														</summary>
 														<div
 															class="services-list__spollers-body spollers-price__body">
-															від <span>30</span> грн за м²
+															<div class="spollers-price__body-wrapper">
+																від <span>30</span> грн за м²
+															</div>
 														</div>
 													</details>
 												</div>
@@ -242,7 +245,9 @@
 														</summary>
 														<div
 															class="services-list__spollers-body spollers-price__body">
-															від <span>30</span> грн за м²
+															<div class="spollers-price__body-wrapper">
+																від <span>30</span> грн за м²
+															</div>
 														</div>
 													</details>
 												</div>
@@ -331,7 +336,9 @@
 														</summary>
 														<div
 															class="services-list__spollers-body spollers-price__body">
-															від <span>30</span> грн за м²
+															<div class="spollers-price__body-wrapper">
+																від <span>30</span> грн за м²
+															</div>
 														</div>
 													</details>
 												</div>
@@ -404,7 +411,9 @@
 														</summary>
 														<div
 															class="services-list__spollers-body spollers-price__body">
-															від <span>20</span> грн за м²
+															<div class="spollers-price__body-wrapper">
+																від <span>20</span> грн за м²
+															</div>
 														</div>
 													</details>
 												</div>
@@ -491,7 +500,9 @@
 														</summary>
 														<div
 															class="services-list__spollers-body spollers-price__body">
-															від <span>20</span> грн за м²
+															<div class="spollers-price__body-wrapper">
+																від <span>20</span> грн за м²
+															</div>
 														</div>
 													</details>
 												</div>
@@ -581,7 +592,9 @@
 														</summary>
 														<div
 															class="services-list__spollers-body spollers-price__body">
-															від <span>20</span> грн за м²
+															<div class="spollers-price__body-wrapper">
+																від <span>20</span> грн за м²
+															</div>
 														</div>
 													</details>
 												</div>
@@ -705,7 +718,9 @@
 											</summary>
 											<div
 												class="services-list__spollers-body spollers-price__body">
-												від <span>40</span> грн за м²
+												<div class="spollers-price__body-wrapper">
+													від <span>40</span> грн за м²
+												</div>
 											</div>
 										</details>
 									</div>
@@ -752,13 +767,15 @@
 											</summary>
 											<div
 												class="services-list__spollers-body spollers-price__body">
-												<div class="spollers-price__body-box">
-													<p class="spollers-price__body-box-desc">поточна:</p>
-													<p>від <span>80</span> грн за м²</p>
-												</div>
-												<div class="spollers-price__body-box">
-													<p class="spollers-price__body-box-desc">після ремонту:</p>
-													<p>від <span>100</span> грн за м²</p>
+												<div class="spollers-price__body-wrapper">
+													<div class="spollers-price__body-box">
+														<p class="spollers-price__body-box-desc">поточна:</p>
+														<p>від <span>80</span> грн за м²</p>
+													</div>
+													<div class="spollers-price__body-box">
+														<p class="spollers-price__body-box-desc">після ремонту:</p>
+														<p>від <span>100</span> грн за м²</p>
+													</div>
 												</div>
 											</div>
 										</details>
@@ -794,21 +811,23 @@
 											</summary>
 											<div
 												class="services-list__spollers-body spollers-price__body">
-												<div class="spollers-price__body-box">
-													<p class="spollers-price__body-box-desc">Холодильник від</p>
-													<span>250 до 400 грн</span>
-												</div>
-												<div class="spollers-price__body-box">
-													<p class="spollers-price__body-box-desc">
-														Мікрохвильова від
-													</p>
-													<span>150 до 250 грн</span>
-												</div>
-												<div class="spollers-price__body-box">
-													<p class="spollers-price__body-box-desc">
-														Духова шафа від
-													</p>
-													<span>300 до 450 грн</span>
+												<div class="spollers-price__body-wrapper">
+													<div class="spollers-price__body-box">
+														<p class="spollers-price__body-box-desc">Холодильник від</p>
+														<span>250 до 400 грн</span>
+													</div>
+													<div class="spollers-price__body-box">
+														<p class="spollers-price__body-box-desc">
+															Мікрохвильова від
+														</p>
+														<span>150 до 250 грн</span>
+													</div>
+													<div class="spollers-price__body-box">
+														<p class="spollers-price__body-box-desc">
+															Духова шафа від
+														</p>
+														<span>300 до 450 грн</span>
+													</div>
 												</div>
 											</div>
 										</details>
@@ -832,8 +851,10 @@
 									<span> Професійний пилосос «Karcher».</span>
 									<h2 class="equipment__item-title title">Види обладнання</h2>
 								</div>
-								<div class="equipment__item-img">
-									<img src="@img/types-of-equipment/1.png" alt="Пелосос">
+								<div class="equipment__item-img" data-gallery>
+									<a href="@img/types-of-equipment/1.png">
+										<img src="@img/types-of-equipment/1.png" alt="Пелосос">
+									</a>
 								</div>
 								<p class="equipment__item-text">
 									У нашій роботі ми не економимо на якісному обладнанні та миючих
@@ -847,60 +868,67 @@
 									Техніка та матеріали від найкращих виробників
 								</p>
 								<div class="equipment__slider swiper">
-									<div class="equipment__wrapper">
-										<div class="equipment__slide swiper-slide">
+									<div class="equipment__wrapper" data-gallery>
+										<a href="@img/equipment-and-materials/1.png"
+											class="equipment__slide swiper-slide">
 											<div class="equipment__slide-img">
 												<img src="@img/equipment-and-materials/1.png" alt="Обладнання">
 											</div>
 											<p class="equipment__slide-text">
 												Професійний пароочисник
 											</p>
-										</div>
-										<div class="equipment__slide swiper-slide">
+										</a>
+										<a href="@img/equipment-and-materials/2.png"
+											class="equipment__slide swiper-slide">
 											<div class="equipment__slide-img">
 												<img src="@img/equipment-and-materials/2.png" alt="Обладнання">
 											</div>
 											<p class="equipment__slide-text">
 												Професійний пароочисник
 											</p>
-										</div>
-										<div class="equipment__slide swiper-slide">
+										</a>
+										<a href="@img/equipment-and-materials/3.png"
+											class="equipment__slide swiper-slide">
 											<div class="equipment__slide-img">
 												<img src="@img/equipment-and-materials/3.png" alt="Обладнання">
 											</div>
 											<p class="equipment__slide-text">
 												Професійний пароочисник
 											</p>
-										</div>
-										<div class="equipment__slide swiper-slide">
+										</a>
+										<a href="@img/equipment-and-materials/4.png"
+											class="equipment__slide swiper-slide">
 											<div class="equipment__slide-img">
 												<img src="@img/equipment-and-materials/4.png" alt="Обладнання">
 											</div>
 											<p class="equipment__slide-text">
 												Професійна хімія
 											</p>
-										</div>
-										<div class="equipment__slide swiper-slide">
+										</a>
+										<a href="@img/equipment-and-materials/5.png"
+											class="equipment__slide swiper-slide">
 											<div class="equipment__slide-img">
 												<img src="@img/equipment-and-materials/5.png" alt="Обладнання">
 											</div>
 											<p class="equipment__slide-text">
 												Професійна хімія
 											</p>
-										</div>
-										<div class="equipment__slide swiper-slide">
+										</a>
+										<a href="@img/equipment-and-materials/6.png"
+											class="equipment__slide swiper-slide">
 											<div class="equipment__slide-img">
 												<img src="@img/equipment-and-materials/6.png" alt="Обладнання">
 											</div>
 											<p class="equipment__slide-text">
 												Професійна хімія
 											</p>
-										</div>
+										</a>
 									</div>
 									<div class="equipment__slider-buttons">
 										<button type="button"
-											class="equipment__button-prev button-prev"></button>
-										<button type="button"
+											class="equipment__button-prev button-prev"
+											aria-label="Вліво"></button>
+										<button type="button" aria-label="Вправо"
 											class="equipment__button-next button-next"></button>
 									</div>
 								</div>
@@ -963,48 +991,60 @@
 							<div class="our-works__wrapper swiper-wrapper">
 								<div class="our-works__slide swiper-slide">
 									<div class="our-works__images-box">
-										<div class="our-works__img">
-											<img src="@img/our-works/before-1.jpg" alt="Фото до">
+										<div class="our-works__img" data-gallery>
+											<a href="@img/our-works/before-1.jpg">
+												<img src="@img/our-works/before-1.jpg" alt="Фото до">
+											</a>
 										</div>
 										<span class="our-works__img-text">
 											до/після
 										</span>
-										<div class="our-works__img">
-											<img src="@img/our-works/after-1.jpg" alt="Фото після">
+										<div class="our-works__img" data-gallery>
+											<a href="@img/our-works/after-1.jpg">
+												<img src="@img/our-works/after-1.jpg" alt="Фото після">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="our-works__slide swiper-slide">
+									<div class="our-works__images-box">
+										<div class="our-works__img" data-gallery>
+											<a href="@img/our-works/before-2.jpg">
+												<img src="@img/our-works/before-2.jpg" alt="Фото до">
+											</a>
+										</div>
+										<span class="our-works__img-text">
+											до/після
+										</span>
+										<div class="our-works__img" data-gallery>
+											<a href="@img/our-works/after-2.jpg">
+												<img src="@img/our-works/after-2.jpg" alt="Фото після">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="our-works__slide swiper-slide">
+									<div class="our-works__images-box">
+										<div class="our-works__img" data-gallery>
+											<a href="@img/our-works/before-3.jpg">
+												<img src="@img/our-works/before-3.jpg" alt="Фото до">
+											</a>
+										</div>
+										<span class="our-works__img-text">
+											до/після
+										</span>
+										<div class="our-works__img" data-gallery>
+											<a href="@img/our-works/after-3.jpg">
+												<img src="@img/our-works/after-3.jpg" alt="Фото після">
+											</a>
 										</div>
 									</div>
 								</div>
 								<div class="our-works__slide swiper-slide">
 									<div class="our-works__images-box">
 										<div class="our-works__img">
-											<img src="@img/our-works/before-2.jpg" alt="Фото до">
-										</div>
-										<span class="our-works__img-text">
-											до/після
-										</span>
-										<div class="our-works__img">
-											<img src="@img/our-works/after-2.jpg" alt="Фото після">
-										</div>
-									</div>
-								</div>
-								<div class="our-works__slide swiper-slide">
-									<div class="our-works__images-box">
-										<div class="our-works__img">
-											<img src="@img/our-works/before-3.jpg" alt="Фото до">
-										</div>
-										<span class="our-works__img-text">
-											до/після
-										</span>
-										<div class="our-works__img">
-											<img src="@img/our-works/after-3.jpg" alt="Фото після">
-										</div>
-									</div>
-								</div>
-								<div class="our-works__slide swiper-slide">
-									<div class="our-works__images-box">
-										<div class="our-works__img">
-											<video autoplay muted loop>
-												<source src="@img/our-works/before-4.MP4">
+											<video class="lg-video-object lg-html5" autoplay muted loop>
+												<source src="@img/our-works/before-4.MP4" type="video/mp4">
 											</video>
 										</div>
 										<span class="our-works__img-text">
@@ -1037,7 +1077,7 @@
 									<p class="info-cards__text">
 										Залиште заявку на сайті, в інстаграм або зателефонуйте по номеру
 										телефону
-										(+380 97 867 58 78)
+										<span class="info-cards__phone">(+380 97 867 58 78)</span>
 									</p>
 								</li>
 								<li class="info-cards__item">
@@ -1154,27 +1194,27 @@
 							</h2>
 						</div>
 						<div class="reviews__slider swiper">
-							<div class="reviews__wrapper swiper-wrapper">
-								<div class="reviews__slide swiper-slide">
+							<div class="reviews__wrapper swiper-wrapper" data-gallery>
+								<a href="@img/reviews/1.png" class="reviews__slide swiper-slide">
 									<div class="reviews__slide-img">
 										<img src="@img/reviews/1.png" alt="Відгук">
 									</div>
-								</div>
-								<div class="reviews__slide swiper-slide">
+								</a>
+								<a href="@img/reviews/2.png" class="reviews__slide swiper-slide">
 									<div class="reviews__slide-img">
 										<img src="@img/reviews/2.png" alt="Відгук">
 									</div>
-								</div>
-								<div class="reviews__slide swiper-slide">
+								</a>
+								<a href="@img/reviews/3.png" class="reviews__slide swiper-slide">
 									<div class="reviews__slide-img">
 										<img src="@img/reviews/3.png" alt="Відгук">
 									</div>
-								</div>
-								<div class="reviews__slide swiper-slide">
+								</a>
+								<a href="@img/reviews/4.png" class="reviews__slide swiper-slide">
 									<div class="reviews__slide-img">
 										<img src="@img/reviews/4.png" alt="Відгук">
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>

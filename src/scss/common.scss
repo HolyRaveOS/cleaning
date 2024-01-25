@@ -76,12 +76,12 @@
 		max-width: toRem(271);
 	}
 
-	&--small {
-		max-width: toRem(247);
+	&--full {
+		max-width: 100%;
 	}
 
 	&--medium,
-	&--small {
+	&--full {
 		gap: toRem(10);
 
 		svg {
@@ -355,6 +355,10 @@
 		}
 	}
 
+	&__body-wrapper {
+		padding: toRem(10);
+	}
+
 	&__body-box {
 		display: flex;
 		gap: toRem(30);
@@ -398,11 +402,13 @@
 
 		transition: transform 0.3s;
 
-		&:hover {
-			transform: translateY(-5%);
+		@media (any-hover: hover) {
+			&:hover {
+				transform: translateY(-5%);
 
-			&:nth-child(even) {
-				transform: translateY(15%);
+				&:nth-child(even) {
+					transform: translateY(15%);
+				}
 			}
 		}
 
@@ -442,6 +448,10 @@
 			min-width: toRem(24);
 			min-height: toRem(24);
 		}
+	}
+
+	&__phone {
+		white-space: nowrap;
 	}
 }
 

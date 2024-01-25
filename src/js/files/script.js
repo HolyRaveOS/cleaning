@@ -87,7 +87,7 @@ async function sendMessage(form) {
       form.reset();
       page.classList.remove('_sending');
       Toastify({
-        text: 'Форма надіслана',
+        text: 'Дякуємо за замовлення! Очікуйте на дзвінок',
         duration: 3000,
         destination: false,
         close: true,

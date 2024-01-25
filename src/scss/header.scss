@@ -126,8 +126,12 @@
 			color: var(--main-color);
 		}
 
-		@media (min-width:$mobile) {
+		@media (max-width: em(2020)) {
 			color: var(--white-color);
+		}
+
+		@media (max-width:$pc) {
+			color: var(--main-color);
 		}
 
 		@media (max-width:$mobileSmall) {
@@ -192,7 +196,7 @@
 
 	&__item {
 
-		@media (min-width:$pc) {
+		@media (max-width: toRem(1940)) {
 			&:last-child {
 				color: var(--white-color);
 			}
